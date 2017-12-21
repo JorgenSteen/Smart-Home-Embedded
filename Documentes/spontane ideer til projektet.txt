@@ -1,0 +1,26 @@
+﻿    - Sette opp et flytkart(FlowChart) av hvordan systemet vårt komuniserer\fungerer.
+        - Hvilke lag vi opperer på.
+        - Protokoller som brukes og hvordan de henger samen(konekter) til hverandre.
+        - Dataflyt for systemet og netverket.
+		
+	- En presentasjon med interaktive MCU
+		- Vi lager en MCU som foreleserne holder under presentasjon
+		- Denne har flere interaktive deler vil illustrere forksjllige deler
+			-eks: Knapp som representer som ventilen er lukket, selv om den skal være åpen.
+			-eks: De rister på den for å simulere et jordsjelv og 
+			- Dere fikling og risting vil hoved systemet reagerer på en bra og tydlig måte.
+
+	- Prosjekt tanker:
+
+		- Mål strømforbruk på nodene:
+			- fullt kitta ut med alle senor. (maks effekt)
+			- vanlig forbruk (idel) 
+
+	- Definere antall sensorer og hvilke senorer:
+		- aclerasjon\virbasjon.
+		- intern tempratur.
+		- ekstern tampratur(nøyaktig\referangse).
+		- lys sensor.
+		- bevegelses senor.
+		- bryter.
+		- potmeter.
