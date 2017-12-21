@@ -1,0 +1,40 @@
+﻿Møtereferat: 15.12.2017
+
+Tilstede: Jørgen, Jonathan, Alexander
+
+
+
+1. Hva har man gjort siden sist?
+    Jørgen: -gjort programmet  mer stabilt
+            -lagt til at man kan plotte data visuelt
+            -testet å kjøre programmet i 100 timer
+    Jonathan:   -sett mer på xbeekoden og funnet ut av hva som skal testes
+    Alexander: -øvd på latex
+
+2. Planer for hva som skal gjøres i løpet av helgen
+    få ferdig kommunikasjonen/det grunnleggwnde
+    dokumentere hva man har gjort(kladd)
+    gjøre klar stukturen til rapporten
+    sørge for at alle nodene kommuniserer som ønsket
+
+2. Nye småoppgaver
+ikke noe nytt
+
+3. Hva skal vi gjøre frem til jul?
+
+
+4. Mål og mellommål
+skal ha testet systemet og dokumentert resultatet
+ha laget kode for valgte sensorer innen vi møtes etter jul
+
+5. Samle referanser
+Alle må passe på å holde orden i eventuelle kilder
+
+6. Neste møte?
+    5. januar
+
+    -rapporten (hva er gjort skal gjøres)
+    - koden for sensorene 
+    -sy sammen koden
+    -hva er gjort
+    -plan fremover

@@ -1,0 +1,164 @@
+Møte referat 22.11.2017
+	Tilstedet: Jonathan, Alexander, Jørgen
+	1. Hva er oppgaven? 
+		Krav: 
+			1. Hver sensor skal være et selvstending sensorsystem
+				Måle og vise data lokalt
+			2. 
+				Gjør del 1 til et trådløst sensornetverk.
+					Alarm prioriteringer og alarm melding til alle nodene
+				Logge dataen til nodene på Pcen med labview.
+					Send temp data hvert minutt
+			3. Live feed og displaying av daten.		
+		
+		Del Oppgaver
+			
+	
+	2. Hva er målet vårt
+		minimum:
+			3 noder og en master sender temp+acc+ekstra sensor med vising i labview. 
+			Alarm system.
+			Clear channel assessment controll(passe på at alt kommer fram.)
+		maksimum:
+			Flere sensorer
+			Fysisk forandringer
+				Slå  på lys, vifte, lysmatrise, servo
+			Ekg med alarm?
+			Brukervennlig front(GUI), så fint ha det i stua.
+			Dynamisk nettverk hvor rekkefølge, adresse til verdien.
+			Bluetooth  integrering(stying av lys osv).
+			Meshnetwork
+			Lage fine etuier til nodene.(3d-printing)
+			
+	3. Hva skal vi være ferdig til den 24.11
+		minimum
+			2 noder + pc, temp acc og alarm. Display og kontroll i labview.
+		maksimum
+			Skjermen viser verdiene
+			Flere noder
+			Meshnetwork
+			Clear channel assessment controll(passe på at alt kommer fram.)
+			Flere sensorer
+			God labview interface
+	3. Oppgave register.
+		Hovedoppgaver.
+			
+			1. kommunikasjon LabVIEW - Mbed (Kommunikasjon protocol)
+				Arbeidsoppgaver:
+					Dokumetere protokolen
+					Lage funksjon(e.l.) i Mbed for sending og motagelse
+					Lage sortering og displaying i labview
+						Sending og mottaging.
+					Laget flowchart og dokumentasjon på hvordan det fungerer
+					Lage framgangsplan for deloppgaven.
+					Grensesnitt:
+						Fra sending av data i MBED til serielt. 
+						Til. Serielt mottat på pcen og sortert i labview
+						Ikke: Internt i XBEE.
+					Ansvar: 
+						Få stabil og trygg kommunikasjon mellom labview og nodene
+			2. XBEE - Få kontroll over elementene
+				Arbeidsoppgaver:
+					Dokumenterer valg og instillinger og hvorfor det ble sånn.
+					Definere og kontrollere XBEE kommunikasjonen
+					Vite alt om configurering av XBEE.
+						hvordan og hva ting betyr og hvorfor man gjør det man gjør.
+					Kunne dynamisk konfiguere det i mbed firmwaret
+					Laget flowchart og dokumentasjon på hvordan det fungerer
+					Lage framgangsplan for deloppgaven.
+					
+				Ansvar:
+					Få stabilt og helt kontrollert kommunikasjon med XBEE.
+			3. Rapportskriving - Formatering og planlegging av hva som skal i oppgaven.
+				Arbeidsoppgaver:
+					planlegge formatet til rapporten
+					Se over skrivefeil og purre på dårlig forklaring.
+					passe på at alle valg blir 
+					Lage møte oppsett og organisere møte.
+						Samle temaene møte skal handle om.
+				
+				Ansvar:
+					Få en fin og oversiktlig rapport
+					Passe på at rapport bli oppdatert gjevnlig av de andre og selv.
+					
+					
+			4. Leder/organisering?
+				Hovedoppgaver
+					Passe på at alle vet hva de skal.
+					At det en good dynamik mellom personene.
+					Oppgave fordelling/ holde styr på.
+				Ansvar:
+					Passe på at alle forstår arbeidsoppgavene sine
+					Skape god kommunikasjon
+					Passe på tid blir sløst
+			
+			5. LabVIEW	frontend
+				
+				Hovedoppgaver:
+					Lage fin og behagelig brukerinterface
+					Lage en instalasjonsfil.
+					Lage forklaringering
+					Dokumentere programmet
+				Ansvar:
+					Lage interface og display i labview
+					
+			6. Break testing. Stabilitets testing.
+				Hovedmål
+					Prøvd å få programmer til å crashe
+					Dokumtere og finne feil
+					Komme med rapport og utbedring av feil.
+					holde styr på feil og sjekke at de er borte.
+				
+				Ansvar:
+					Dokumtere og passe på at alt virker under alle omstendiheter
+					Passe på at alt som kan gå galt, har gått galt før presentasjonen.
+					
+					
+			7. Mbed firmware ansvarlig
+				Hovedmål:
+					Få alle mbeded til å være kompatible
+					Kommentere kodene
+					lage orden system.
+					Forstår all koden.
+					gjøre Mbed programming samarbeid bedre
+				
+				Ansvar:
+					Passe på at alle kodene har lik struktur, ser bra ut og er godt kommentert
+			
+			8. Hardware ansvarlig?
+		
+		Småoppgaver.
+		
+			1. Sette opp en ekstern sensor
+				Minst 1 hver med h fil(bibliotek).
+			2. Sette opp ting å kontrollere. Motorer, led osv.
+			3. lage deksel
+			
+				
+				
+			
+			
+			
+			
+			
+	5. Hva er oppgaven til hvert individ(Ansvarsområder).
+		1. Jørgen
+		2. Jonathan
+		3. Alexander
+		4. Jonathan
+		5. Alexander
+		6. jonathan
+		7. Jørgen 
+
+
+	Neste møte
+		Tema :
+			- Nye småoppgaver og andre deler
+			- Når er nesten gang vi skal jobbe med projektet sammen
+			- Hva skal vi gjøre til nesten?
+			- Hva kan har vi gjort og hvordan det kan fobedres til neste gang.
+			- 
+		Dato : 24.11 (etter framføring)
+		
+
+			

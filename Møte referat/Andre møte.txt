@@ -1,0 +1,80 @@
+Møtereferat: Etter prototypepresentasjon
+Møtereferatskriver: Jørgen Steen
+Tilstedet: Jørgen, Jonathan, Alexander
+
+
+1. Hva har man gjort siden sist?
+	Jonathan: 
+		- Funnet og konfigurert setting til XBEE modul
+		- Fått etablert et mesh nettverk mellom nodene(digimesh).
+		- Gravd i XBEE bibliotekene til MBED kontroller for å kontrollere nettverkstrukturer og finne ut hvordan det fungerer.
+			- Test hver del av biblioteket individuelt for å finne ut om det fungerer(Det gjør det)
+		- Begynt å sette opp en rapport struktur
+		- In progress: Et MBED program som sender infomasjonen vi ønsker.
+		- Til nestegang: Fullføre det som er i progress.
+	Alexander: 
+		- Hjulpet jonathajn med alle punktene(Fordi det var det som hastet).
+		- Til nestegang: 
+			- Lære sharelatex
+			- Jobbe med formtering av rapport.
+				- Sette inn møtereferat og rette de.
+				- Lage møtereferat til møte 3.
+	Jørgen:
+		- Kommet godt i gang med en kommunikasjon protokol
+			- Lagd kommunikasjon protokol dokumentasjon
+			- Lagd formatering funksjoner for MBED.
+			- Satt opp LabVIEW program som tar i mot, formaterer og lagrer pakkene.
+		- In progress: Dokumeterer protokollen bedre og ferdigstille den.
+		- Til nestegang: Fortsette med det som er in progress.
+2. Nye småoppgaver og andre deler
+	- Lage mobilinterface(ikke liten, men strech oppgave).
+
+3. Hva skal vi gjøre til nesten?
+	- Jobbe med indivudel oppgaver og eksamen.(Ikke projekt relatert).
+4. Hva kan har vi gjort og hvordan det kan fobedres til neste gang.
+	- Se punkt 1.
+5. Felles forslag til ting som kan bli gjort under hver av hovedoppgavene.
+ - 1. kommunikasjon LabVIEW - Mbed (Kommunikasjon protocol).
+	- Fullføre kommunikasjon Protokollen og dokumentere den
+	- Lage prototype med 3 noder.
+	- Lage bibliotek og SUBVI så protokolen kan smerte implemeteres der den trengs.
+ - 2. XBEE - Få kontroll over elementene
+	- Konkludere Hvordan meshnettverket skal bli satt opp.
+	- Få en stabil og sikker kobling mellom alle nodene.
+		- Alle sender til master og kan motta fra master
+		- Ikke ha dataloss.
+	- Stress teste.
+- 3. Rapportskriving - Formatering og planlegging av hva som skal i oppgaven.
+	- Sette opp rapportens struktur.
+		- Planlegge hvordan rapport skal se ut.
+		- Finne ut hva som skal dokumenteres godt underveis og hvordan.
+	- Planlegge møte.
+	- Lage møtereferat mal og sortere og legge inn møteferat i rapporten.
+	- Lage en oppsumering av møterefratetes innhold(Og sette opp timeline?)
+- 4. Leder/organisering
+  - Finne en platform hvor vi kan kommunisere og samhandle og oppdatere arbeidsprogresjon.
+  - Prøve å finne ut hva vi har igjen å gjøre.
+ - 5. LabVIEW	frontend
+	 - Finne ut hva vi skal samle av data.
+	 - lage en fin brukerinterface i labview
+	 - Dokumetere hvordan man bruker labview programmet.
+ -6. Break testing. Stabilitets testing.
+	- Sjekke at alt er stabilt.
+	- Ingen ting er stabilt så ikke mye å gjøre nå.
+- 7. Mbed firmware ansvarlig.
+	- Planlegge hvordan skalet med hovedfunksjonen skal se ut.
+	- Sjekke kommentering og kodeskikk som koden blir ferdig
+- 8. Hardware ansvarlig.
+	- Alle kan se på sensorer og hvordan krets de trenger for å få det koblet til
+	- Lage hardware til MBEDen(Lys, sensor, viftestying)
+	- Kode til hardware.
+6.  Når er nesten gang vi skal jobbe med projektet sammen
+	- Neste gang: 14. des
+	- Neste møte: 14. des.(Tentativt).
+	
+7. Temaer for neste møte.
+ - Oppdateringer
+ - Arbeidsplanlegging fram til jul.
+ - finne mål og mellommål.
+ - Samle referanser
+ 
