@@ -3,26 +3,145 @@ Jorgens Communication protocol over serial
 Made for communication between an MCU and Labview
 
 ###Operation
-####Sending from MCU to PC:
+##Sending from MCU to PC:
 Sending is CSV based. Each letter is comma seperated and ends with 0xA "\n".
 The first number is always the MCU address/name [0-255].
-The order of the rest is not imporant, but rach form of data has a specific "Adress" before its value to indicate what the value is for.
+The order of the rest is not imporant, but rach form of data has a specific "Address" before its value to indicate what the value is for.
 Example string for MCU to PC:
-Data info: MCU adress: A, data form adress: 7, value to send is 17.5.
-"A, 7, 17.5 \n"
+Data info: MCU address: B, data form adress: 7, value to send is 17.5.
+"B, 7, 17.5 \n"
 
-####Sending from PC to MCU
+#Types of packages
+When the MCU sends a packaged to the PC it places the address in the position in front of the data, as stated earlier.
+When the LabVIEW program recieves these data it creates an array and places each data point in the same position as its address
+
+The various types of data that has an address:
+Internal addresses:
+
+Internal time 
+
+
+MCU_ADRESS_DATA 5
+
+ACC_X_DATA 10
+ACC_Y_DATA 11
+ACC_Z_DATA 12
+TEMP_DATA 13
+TIME_HOURS_DATA 14
+TIME_MINUTS_DATA 15
+TIME_SECONDS_DATA 16
+
+
+##Sending from PC to MCU
 Sending position based with dynamic length.
 Each package will only contain data about one ting. Time/date, Alarm, position etc.
 The package consist of 4 main parts, were 1,2,3 is always a uint8_t and 4 is an array of uint8_t.
-	1. Adress of MCU
+	1. Address of MCU
 	2. Type of package
 	3. length of package
 	4. Package
 
 Example of data from PC to MCU
-MCU address: A, Package type: date/time(2), Time: 22:02:11
-uint8_t PC_package[] = [A, 2, 3, 22, , 2, 11];
+MCU address: B, Package type: date/time(2), Time: 22:02:11
+uint8_t PC_package[] = [B, 2, 3, 22, , 2, 11]
+
+
+#Types of packages
+
+Unknown 0
+ALARM 1
+ERROR 2
+TIMEDATE 3
+STATUS 4
+REQUEST 5
+COMMAND 6
+
+//Types of Command and Request
+
+Unknown 0
+NEOPIXEL 1
+FANCONTROL 2
+HEATCONTROL 3 
+DISPLAYTEXT 4
+
+
+
+## Protocol Data info 
+uint8_t MCU_adress = 'B';
+uint8_t MCU_adress_all = 'A';
+
+// Number for for types of data
+///Types to recieve
+#define Number_incomming_message_type 7
+
+#define Unknown 0
+#define ALARM 1
+#define ERROR 2
+#define TIMEDATE 3
+#define STATUS 4
+#define REQUEST 5
+#define COMMAND 6
+
+//Types of Command and Request
+
+#define Unknown 0
+#define NEOPIXEL 1
+#define FANCONTROL 2
+#define HEATCONTROL 3 
+#define DISPLAYTEXT 4
+
+
+/*
+const char *Incomming_message_type[Number_incomming_message_type]; 
+Incomming_message_type[ALARM] =  "Alarm";
+Incomming_message_type[ERROR] =  "Error";
+Incomming_message_type[TIMEDATE] = "Time_and_Date";
+Incomming_message_type[STATUS] = "Status";
+Incomming_message_type[REQUEST] = "Request";
+*/
+
+
+//Data Adress starts at 10
+
+#define MCU_ADRESS_DATA 5
+
+#define ACC_X_DATA 10
+#define ACC_Y_DATA 11
+#define ACC_Z_DATA 12
+#define TEMP_DATA 13
+#define TIME_HOURS_DATA 14
+#define TIME_MINUTS_DATA 15
+#define TIME_SECONDS_DATA 16
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ************************************/
 
