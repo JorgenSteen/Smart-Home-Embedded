@@ -5,11 +5,12 @@ Created on 11.01.2018
 
 #MCU-level
 [] 1. Proper priority control
-[] 2. implementing different request and commands
-[] 3. Differatiating between command and request
+[X] 2. implementing various request and commands
+[] 3. Differentiating between command and request
 [] 4. Making it compatable with the MESH-network
-[] 5. Fixing the bug were the whole alarm message does not get printed
+[] 5. Fixing the bug were the whole alarm message does not get printed and force it to clear that memory.
 [] 6. Making a easy and stable way for labview and the MCU to agree on the values
+[] 7. 
 
 
 #LabVIEW Level
