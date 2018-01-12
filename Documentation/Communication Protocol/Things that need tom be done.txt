@@ -4,16 +4,16 @@ Created on 11.01.2018
 [] = Undone, [x] = Done.
 
 #MCU-level
-[] 1. Proper priority control
+[X] 1. Proper priority control
 [X] 2. implementing various request and commands
-[] 3. Differentiating between command and request
+[X] 3. Differentiating between command and request
 [] 4. Making it compatable with the MESH-network
 [] 5. Fixing the bug were the whole alarm message does not get printed and force it to clear that memory.
-[] 6. Making a easy and stable way for labview and the MCU to agree on the values
-[] 7. 
+[] 6. Making a easy and stable way for labview and the MCU to agree on the addresses
+[X] 7. Set up a properly timed communication
 
 
 #LabVIEW Level
 [] 1. Make a more intelligent alarm protocol
-[] 2. Implement time and date into the logging
+[X] 2. Implement time and date into the logging
 [] 3. Separate the communication part and the live feed part, each can be cleaner and the input can be view live from the frontpage
