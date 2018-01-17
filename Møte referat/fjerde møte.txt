@@ -1,0 +1,74 @@
+Fjerde møte:
+
+Møtereferat. 15.01.2018
+
+Til stede: Jonathan, Jørgen
+
+Ikke til stede: Alexander
+
+
+	1. Hva har man gjordt siden sist?
+		Jonathan:
+			Jobbet med Digimesh å funnet ut at vi ikke får integrert i system vårt innenfor tidsrammene vi har.
+			Startet med å lage en oversikt over funksjonaliteten til XBEE-modulene.
+			Lagd 3 lys-sensorer(LDR), men komplimenterende Mbed kode.
+			Konfigurert alle XBEE modulene til et stjerne nettverk(Hardware og datalink layer).
+			Designet og printet etuier til Mbed nodene.
+			Integrert github for deling av materialet til arbeidsgruppen for å skape en bedre project managmet
+		Jørgen:
+			Jobbet videre med kommunikasjonprotokollen i labview og Mbed.
+				Nærmer seg slutten på grunnkommunikasjon laget.
+				Satt opp et system så man kan sende data fra hvor som helst i programmet over serielt.
+				Konstant lesing av input data for alarm evaluering
+			Satt opp kommunikasjonprotocol over SPI fra Mbed, som kan kontrolleres fra LabVIEW.
+			Styring av Led Matrise med interface i LabVIEW.
+			Begynt på App for å styre systemet. Kun på fritid, ikke en prioritering.
+			Satt opp programmer for analysering av dataen fra mikrokontrolleren.
+			Integrert github for deling av materialet til arbeidsgruppen for å skape en bedre project managmet
+			
+	
+	2. Planer for hva som skal gjøres fram til neste møte.
+	
+		Jobbe med rapport.
+			Lage en rapport plan
+			Iterer rundt oppbygniong og strukturen til rapporten så prokjektet blir framstilt på mest mulig oversiktlig måte
+			Fylle rapporten med info
+				Nesten ingen ting er formalisert til rapport strukturen, så alle våre foreløbige notater og skriv må bli skrevet inn i rapporten.
+				Lage og lege til illustrasjoner og tegninger
+				Få fram projekt managment som en del av rapporten.
+		
+		Ferdigstille og teste hele systemet.
+			Gjøre ferdig kommunikasjon protokollen.
+			Sette opp sensor og andre styring.
+			Sy sammen kode. 
+			Få alarmen ferdigstilt.
+				Slå på buzzere når det er alarm
+				Få Mbedene til å sende data med en gang det er alarm.
+			Sette opp stabil kommunikasjon mellom XBEE-modulenbe
+		Ekstra
+			Ferdigstille Appen
+			Legge til flere sensorer.
+			Lage demoer.
+			Batteridrevet.
+			
+		Prioriteringsrekkefølge
+			1. Jobbe med rapport
+			2. Ferdstille og teste hele systemet
+			3. Ekstra	
+				
+
+	3. Nye oppgaver/temaer
+		Ingen nye temaer så nærme fristen.
+		Blir kanskje lagdt til på neste møte hvis det blir tid.
+	4. Mål og mellom mål.
+		
+		Mål
+			- 2 forandringer siden sist
+				- Ikke mesh, men stjerne topologi.
+				- Lagd til SPI-kommunikasjon for kontakt med seriel sensorer og systemer
+		
+		Mellom mål
+			- Ingen nye.
+	
+	5. Neste møte 19.01.2018
+	
