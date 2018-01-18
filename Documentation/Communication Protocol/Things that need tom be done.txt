@@ -14,6 +14,6 @@ Created on 11.01.2018
 
 
 #LabVIEW Level
-[] 1. Make a more intelligent alarm protocol
+[x] 1. Make a more intelligent alarm protocol
 [X] 2. Implement time and date into the logging
 [] 3. Separate the communication part and the live feed part, each can be cleaner and the input can be view live from the frontpage

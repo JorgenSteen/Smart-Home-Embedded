@@ -1,6 +1,6 @@
 ##The Operation Nature of the LabVIEW Program
 
-#Main Idea of the Structur
+#Main Idea of the Structure
 The Program starts by initiating essential configuration values for the the program parts.
 It then loads those values into the appropriate place. The configuration settings for the Serial communication(Ports etc.) gets loaded into the VI from a file. If this file does not exsist you will be prompted to create one and it is possible to edit it while the program is running. One will need to restart for the new configuration to be loaded, not necessarily the whole program, but most of the time just the program that was configured.
 
