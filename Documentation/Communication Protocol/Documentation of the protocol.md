@@ -1,6 +1,6 @@
 
-Jorgens Communication protocol over serial
-Made for communication between an MCU and Labview
+Jorgens Communication protocol over serial communication.
+Made for communication between an MCU and Labview, but can be implented on any device.
 
 ###Structure of the text
 
