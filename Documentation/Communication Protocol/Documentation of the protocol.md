@@ -2,7 +2,7 @@
 Jorgens Communication protocol over serial communication.
 Made for communication between an MCU and Labview, but can be implented on any device.
 
-###Structure of the text
+### Structure of the text
 
 #Operation
 General info
@@ -20,7 +20,7 @@ Functions
 ###Operation
 
 ##General info Info about sending data
-Each data type has an ID and each MCU has an address. Every MCU sends to the PC and PC sends to everyone. Every package contains the address of either the sender or the one it is being sent to. Message for the PC contains the address of the one who sendes it and the message for the MCU contains the address of who it is for. In this way the MCU can seperate all the package the PC sends, by reading the address and discards it if it is not ment for it. In the message there is also data and an ID of the type of data it contains. This is what they have in common, but how they format the string is different.
+Each data and message type has an ID and each MCU has an address. Every MCU sends to the PC and PC sends to everyone. Every package contains the address of either the sender or the one it is being sent to. Message for the PC contains the address of the one who sendes it and the message for the MCU contains the address of who it is for. In this way the MCU can separate all the package the PC sends, by reading the address and discards it if it is not ment for it. In the message there is also data and an ID of the type of data it contains. This is what they have in common, but how they format the string is different.
 
 ##Sending from MCU to PC:
 Sending is CSV based. Each letter is comma seperated and ends with 0xA "\n", so the reciever knows that this is the end of the message.
@@ -33,7 +33,7 @@ Data info: MCU address: B, with MCU address ID: 5, data type ID: 18, value to se
 									"5, B, 7, 17.5 \n"
 						ID, follower by data and ending it with \n (new line) 
 
-When the data is received on the PC it should short the incoming message into an array, were the data type ID is the location of the data point so it will be easy to retrive it later and it would make the sorting automatic.
+When the data is received on the PC it should sort the incoming message into an array, were the data type ID is the location of the data point in the array, so it will be easy to retrive it later and it would make the sorting automatic.
 
 
 ##Sending from PC to MCU
@@ -50,6 +50,8 @@ MCU address: B(66), Package type: date/time(3), Payload: [22,02,11] (the time is
 
 MCU address: C, Package type Alarm, ID: 1, Payload: "Alarm" (A string)
 							[67, 1, 5, 'A', 'l', 'a', 'r', 'm']
+							
+							[MCU Adress, Data Type ID, Amount data bytes, Byte 1, Byte 2, ..., Byte n].
 
 One send bytes that should be interpreted as bytes and another one sends byte chars that should be gathered and interpreted as a string. In the library complementing this library the input array gets pealed with case structures until it is ready to be read.
 And any handling of the data should be the same.
