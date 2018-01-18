@@ -29,8 +29,8 @@ The adress of the MCU is a Capital letter between B-Z.
 Example string for MCU to PC:
 Data info: MCU address: B, with MCU address ID: 5, data type ID: 18, value to send is 17.5.
 
-									"5, B, 7, 17.5 \n"
-						ID, follower by data and ending it with \n (new line) 
+							"5, B, 7, 17.5 \n"
+				ID, follower by data and ending it with \n (new line) 
 
 When the data is received on the PC it should sort the incoming message into an array, were the data type ID is the location of the data point in the array, so it will be easy to retrive it later and it would make the sorting automatic.
 
