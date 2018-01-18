@@ -61,43 +61,43 @@ And any handling of the data should be the same.
 
 //Types of data the MCU can receive
 
-#define ALARM 1 
-#define ERROR 2
-#define TIMEDATE 3
-#define STATUS 4
-#define REQUEST 5
-#define COMMAND 6
+#define ALARM 1  
+#define ERROR 2  
+#define TIMEDATE 3  
+#define STATUS 4  
+#define REQUEST 5  
+#define COMMAND 6  
 
-//Types of Command and Request the MCU can receive
+//Types of Command and Request the MCU can receive.
 
-#define NEOPIXEL 1
-#define FANCONTROL 2
-#define HEATCONTROL 3 
-#define DISPLAYTEXT 4
-
-
-//These are all the types of Data that can be sent and sorted with this protocol
-//Data ID starts at 10
-
-#define MCU_ADRESS_DATA 5
-#define ACC_X_DATA 10
-#define ACC_Y_DATA 11
-#define ACC_Z_DATA 12
-#define ACC_LEN_DATA 13
-#define TIME_HOURS_DATA 14
-#define TIME_MINUTS_DATA 15
-#define TIME_SECONDS_DATA 16
-#define ZIGBEE_TEMP_DATA 17
-#define INSIDE_TEMP_DATA 18
-#define OUTSIDE_TEMP_DATA 19
-#define POT1_DATA 20
-#define PIR_SENSOR 21
-#define LIGHT_SENSOR 22
+#define NEOPIXEL 1  
+#define FANCONTROL 2  
+#define HEATCONTROL 3   
+#define DISPLAYTEXT 4  
 
 
-//Array ID
-#define Array_data 100
-#define Array_request 101
+//These are all the types of Data that can be sent and sorted with this protocol.
+//Data ID starts at 10.
+
+#define MCU_ADRESS_DATA 5  
+#define ACC_X_DATA 10  
+#define ACC_Y_DATA 11  
+#define ACC_Z_DATA 12  
+#define ACC_LEN_DATA 13  
+#define TIME_HOURS_DATA 14  
+#define TIME_MINUTS_DATA 15  
+#define TIME_SECONDS_DATA 16  
+#define ZIGBEE_TEMP_DATA 17  
+#define INSIDE_TEMP_DATA 18  
+#define OUTSIDE_TEMP_DATA 19  
+#define POT1_DATA 20  
+#define PIR_SENSOR 21  
+#define LIGHT_SENSOR 22  
+
+
+//Array ID.  
+#define Array_data 100  
+#define Array_request 101  
 
 
 
@@ -180,7 +180,7 @@ uint8_t Send_to_PC(uint8_t length, ...) {
 ### LabVIEW code.
 ## About. 
 The LabVIEW code is not ment for be illustrated in text form, so it should be open and looked if it wish to be understood.
-But using LabVIEW is not a must, as long as one has a reciever that interprets the incoming data as described over all the data should be collected. The main difference will be that the LabVIEW software contains 
+But using LabVIEW is not a must, as long as one has a reciever that interprets the incoming data as described over all the data should be collected. The main difference will be that the LabVIEW software contains. 
 
 ## Function.
 Other than sorting the incoming data the LabVIEW code has 2 main type of functions.
