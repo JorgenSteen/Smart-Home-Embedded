@@ -1,23 +1,22 @@
 
-Jorgens Communication protocol over serial communication.
-Made for communication between an MCU and Labview, but can be implented on any device.
+#### Jorgens Communication protocol over serial communication. Made for communication between an MCU and Labview, but can be implented on any device.
 
-### Structure of the text
-
-# Operation.
-General info.
-Sending from MCU to PC.
-Sending from PC to MCU.
-Data type ID list.
-# Example for using the Library on the MCU. 
-Calling it in the main.
-Examples of the main function in the liberary.
-The liberary should be close to these files.
-# LabVIEW code.
-About.
-Functions.
+## Structure of the text
 
 ### Operation.
+General info.  
+Sending from MCU to PC.  
+Sending from PC to MCU.  
+Data type ID list.  
+### Example for using the Library on the MCU. 
+Calling it in the main.  
+Examples of the main function in the liberary.  
+The liberary should be close to these files.  
+### LabVIEW code.
+About.  
+Functions.  
+
+# Operation.
 
 ## General info Info about sending data.
 Each data and message type has an ID and each MCU has an address. Every MCU sends to the PC and PC sends to everyone. Every package contains the address of either the sender or the one it is being sent to. Message for the PC contains the address of the one who sendes it and the message for the MCU contains the address of who it is for. In this way the MCU can separate all the package the PC sends, by reading the address and discards it if it is not ment for it. In the message there is also data and an ID of the type of data it contains. This is what they have in common, but how they format the string is different.
@@ -102,7 +101,7 @@ And any handling of the data should be the same.
 
 
 
-### Example for using the Library on the MCU.
+# Example for using the Library on the MCU.
 This part will contain some examples of how the library is used in the main and the 2 main functions that are used in this library.
 
 ## Example for using the code.
@@ -177,7 +176,7 @@ uint8_t Send_to_PC(uint8_t length, ...) {
    return error_status;
 }
 
-### LabVIEW code.
+# LabVIEW code.
 ## About. 
 The LabVIEW code is not ment for be illustrated in text form, so it should be open and looked if it wish to be understood.
 But using LabVIEW is not a must, as long as one has a reciever that interprets the incoming data as described over all the data should be collected. The main difference will be that the LabVIEW software contains. 
