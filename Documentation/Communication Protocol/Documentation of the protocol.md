@@ -140,36 +140,36 @@ In this example i use the XBEE serial communication to tell me when a message is
 
 	uint8_t error_status = 0; //initiate Error status for error handling
 
-	//checks that an even number is sent inn
-	if(!(length & 0x01)){
+		//checks that an even number is sent inn
+		if(!(length & 0x01)){
 
-		char str[128]; //String buffer
-		uint8_t index = 0; //Position of data written to the string. 
-		uint8_t input_position; //Position of Data
-		double send_array[length]; //store the data before converting to string
+			char str[128]; //String buffer
+			uint8_t index = 0; //Position of data written to the string. 
+			uint8_t input_position; //Position of Data
+			double send_array[length]; //store the data before converting to string
 
 
-		/* initialize valist for length number of arguments */
-		va_list valist;
-		va_start(valist, length);
-		//Writes must have data into the string
-		index += sprintf(&str[index], "%d,", MCU_ADRESS_DATA); //Insert data location for the MCU NAme
-		index += sprintf(&str[index], "%d", MCU_adress); //Insert the MCU Name
+			/* initialize valist for length number of arguments */
+			va_list valist;
+			va_start(valist, length);
+			//Writes must have data into the string
+			index += sprintf(&str[index], "%d,", MCU_ADRESS_DATA); //Insert data location for the MCU NAme
+			index += sprintf(&str[index], "%d", MCU_adress); //Insert the MCU Name
 
-		/* access all the input arguments assigned to valist  and puts it in the correct order*/
-		for (input_position  = 0; input_position   < length; input_position++) {
-		send_array[input_position] = va_arg(valist, double);
-		index += sprintf(&str[index], ",%.2f", send_array[input_position]);
+			/* access all the input arguments assigned to valist  and puts it in the correct order*/
+			for (input_position  = 0; input_position   < length; input_position++) {
+			send_array[input_position] = va_arg(valist, double);
+			index += sprintf(&str[index], ",%.2f", send_array[input_position]);
+			}
+
+			 Serial_Com.printf("%s \n", str); //Sends the string
+			/* clean memory reserved for valist */
+			va_end(valist);
 		}
-
-		 Serial_Com.printf("%s \n", str); //Sends the string
-		/* clean memory reserved for valist */
-		va_end(valist);
-	}
-	else
-	{
-		error_status = 1;
-	}
+		else
+		{
+			error_status = 1;
+		}
 	return error_status;
 	}
 
