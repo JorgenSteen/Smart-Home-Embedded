@@ -108,73 +108,70 @@ This part will contain some examples of how the library is used in the main and 
 
 In this example i use the XBEE serial communication to tell me when a message is ready and a timer to make sure it sends every minut.
 
-int main() 
-{
-    Communication_shell_init(); //Initating the Communication Protocols function
-    
-    while(1)
-    {
-		//Sendinger data to a function that adds and format the text a little.
-		if(Variable_that_becomes_true_every_minut)
+	int main()      
+	{        
+		Communication_shell_init();   
+		while(1)  
 		{
-			Variable_that_becomes_true_every_minut = false;
-			
-			uint8_t dump = Send_to_PC(10, (float)TIME_HOURS_DATA, (float)hours, (float)TIME_MINUTS_DATA, (float)minuts, (float) TIME_SECONDS_DATA, (float)seconds.read(), (float)ZIGBEE_TEMP_DATA, temperature3); 
+			//Sendinger data to a function that adds and format the text a little.
+			if(Variable_that_becomes_true_every_minut)
+			{
+				Variable_that_becomes_true_every_minut = false;
+
+				uint8_t dump = Send_to_PC(10, (float)TIME_HOURS_DATA, (float)hours, (float)TIME_MINUTS_DATA, (float)minuts, (float) TIME_SECONDS_DATA, (float)seconds.read(), (float)ZIGBEE_TEMP_DATA, temperature3); 
+			}
+
+			//Calls a serial read function if there is something to be read
+			if(Serial_Com.readable())
+			{
+				Incomming_data_handler();
+			}
 		}
-		
-		//Calls a serial read function if there is something to be read
-		if(Serial_Com.readable())
-		{
-			Incomming_data_handler();
-		}
-				
 	}
-    
-}
 
 
 
 ## Example of the Library.
 
 
-//Sending from the 
-uint8_t Send_to_PC(uint8_t length, ...) {
+	//Sending from the MCU to PC  
 
-  uint8_t error_status = 0; //initiate Error status for error handling
-  
-  //checks that an even number is sent inn
-  if(!(length & 0x01)){
-     
-     char str[128]; //String buffer
-     uint8_t index = 0; //Position of data written to the string. 
-     uint8_t input_position; //Position of Data
-     double send_array[length]; //store the data before converting to string
-     
+	uint8_t Send_to_PC(uint8_t length, ...) {
 
-     /* initialize valist for length number of arguments */
-     va_list valist;
-     va_start(valist, length);
-     //Writes must have data into the string
-    index += sprintf(&str[index], "%d,", MCU_ADRESS_DATA); //Insert data location for the MCU NAme
-    index += sprintf(&str[index], "%d", MCU_adress); //Insert the MCU Name
-    
-     /* access all the input arguments assigned to valist  and puts it in the correct order*/
-     for (input_position  = 0; input_position   < length; input_position++) {
-        send_array[input_position] = va_arg(valist, double);
-        index += sprintf(&str[index], ",%.2f", send_array[input_position]);
-     }
+	uint8_t error_status = 0; //initiate Error status for error handling
 
-         Serial_Com.printf("%s \n", str); //Sends the string
-      /* clean memory reserved for valist */
-      va_end(valist);
-  }
-  else
-  {
-    error_status = 1;
-  }
+	//checks that an even number is sent inn
+	if(!(length & 0x01)){
 
-   return error_status;
-}
+		char str[128]; //String buffer
+		uint8_t index = 0; //Position of data written to the string. 
+		uint8_t input_position; //Position of Data
+		double send_array[length]; //store the data before converting to string
+
+
+		/* initialize valist for length number of arguments */
+		va_list valist;
+		va_start(valist, length);
+		//Writes must have data into the string
+		index += sprintf(&str[index], "%d,", MCU_ADRESS_DATA); //Insert data location for the MCU NAme
+		index += sprintf(&str[index], "%d", MCU_adress); //Insert the MCU Name
+
+		/* access all the input arguments assigned to valist  and puts it in the correct order*/
+		for (input_position  = 0; input_position   < length; input_position++) {
+		send_array[input_position] = va_arg(valist, double);
+		index += sprintf(&str[index], ",%.2f", send_array[input_position]);
+		}
+
+		 Serial_Com.printf("%s \n", str); //Sends the string
+		/* clean memory reserved for valist */
+		va_end(valist);
+	}
+	else
+	{
+		error_status = 1;
+	}
+	return error_status;
+	}
 
 # LabVIEW code.
 ## About. 
