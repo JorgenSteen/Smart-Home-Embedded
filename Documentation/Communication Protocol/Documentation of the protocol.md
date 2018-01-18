@@ -1,4 +1,4 @@
-/**********************************
+
 Jorgens Communication protocol over serial
 Made for communication between an MCU and Labview
 
