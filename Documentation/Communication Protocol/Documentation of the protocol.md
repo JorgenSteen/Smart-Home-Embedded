@@ -172,7 +172,43 @@ In this example i use the XBEE serial communication to tell me when a message is
 		}
 	return error_status;
 	}
+	
+	//Recieving Data from the PC
+	void Incomming_data_handler(void)
+	{
+	    uint8_t Incomming_address = Serial_Com.getc();
+	    if((Incomming_address == MCU_adress) || (Incomming_address == MCU_adress_all))
+	    {   
+		Message_in_buffer = true;
+		uint8_t counter = 0; //Keeping track of the position of the next byte.
+		while(Serial_Com.readable() && (counter<Input_buffer_size))
+		{
+		    Serial_Input_buffer[counter] = Serial_Com.getc(); //Places the data from the serial input to the buffer
+		    counter++;
+		}
+		if(!(counter<Input_buffer_size))
+		{
+		    while(Serial_Com.readable())
+		    { 
+			uint8_t dump = Serial_Com.getc();
+		    }
+		}
 
+		if(((uint8_t)Serial_Input_buffer[0] == 1) || ((uint8_t)Serial_Input_buffer[0] == 6))
+		{
+		    Serial_data_handler();
+		}
+	    }
+	    else
+	    {
+		lcd.printf("Message for %c \n", Incomming_address); 
+		while(Serial_Com.readable())
+		{ 
+		    uint8_t dump = Serial_Com.getc();
+		    Serial_Com.attach(&Incomming_data_handler, Serial::RxIrq);
+		} 
+	    }
+	}
 # LabVIEW code.
 ## About. 
 The LabVIEW code is not ment for be illustrated in text form, so it should be open and looked if it wish to be understood.
