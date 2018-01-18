@@ -1,0 +1,77 @@
+Xbee modul oversikt:
+
+
+ Modul navn:	MAC Adresse: 						Konfig?:					Type:
+	A					0013A200 - 4076A99F			DM_BD3_CH10_ID1EF				DM_Router
+	B					0013A200 - 40BA37AC 		XB24_BD3_CH14_ID2529			End Divece
+	C					0013A200 - 4076A9A7			DM_BD3_CH10_ID1EF				DM_Router
+	D					0013A200 - 4076A945			DM_BD3_CH10_ID1EF				DM_Router
+	E					0013A200 - 4076A9A6			XB24_BD3_CH14_ID2529			Collector
+	F					0013A200 - 4071E534			XB24_BD3_CH14_ID2529			End Divice
+	G					0013A200 - 40BA37AE			XB24_BD3_CH14_ID2529			End Divice
+	H					0013A200 - 4071E528			XB24_BD3_CH14_ID2529			End Divece
+	
+	
+	
+	
+	
+	
+	
+Mbed kode for konfigurering av Xbee(set navn og kanal):
+
+
+set_node_identifier(char * node_id)												Sets the Node Identifier so the node is easily identified in the PAN ID
+
+enable_network_encryption(bool enable)											Enable or disable the network encryption
+
+set_network_encryption_key(const uint8_t * const key, const uint16_t length)	Sets the network Trust Center link key
+
+set_network_id(uint16_t network_id)												Configures the module to connect to a specific NETWORK ID
+
+set_channel(uint8_t channel)													Configures the channel in which the NETWORK ID is operating, should be the same in all nodes in the network
+
+
+-------------------------------------------------------------------------------------------------
+#define NEW_NODE_ID         "BASE D"                // Node ID / Name of the mbed module
+#define NEW_NETWORK_ID      0x1fe                   // Nedtverks ID
+#define NEW_CHANNEL         0x10                    // Channal
+#define NEW_POWER_LEVEL     4                       // Transmitter output power level
+------------------------------------------------------------------------------------------------
+
+
+
+Transmit Status (API 2)
+
+7E 00 07 8B 01 FF FE 01 25 02 4E
+
+Start delimiter: 7E
+Length: 00 07 (7)
+Frame type: 8B (Transmit Status)
+Frame ID: 01 (1)
+16-bit dest. address: FF FE
+Tx. retry count: 01 (1)
+Delivery status: 25 (Route not found)
+Discovery status: 02 (Route discovery)
+Checksum: 4E
+
+Explicit RX Indicator (API 2)
+
+7E 00 47 91 00 7D 33 A2 00 40 76 A9 45 FF FE E8 E8 00 7D 31 C1 05 C1 35 2C 37 35 2C 31 34 2E 30 30 2C 30 2E 30 30 2C 31 35 2E 30 30 2C 32 2E 30 30 2C 31 36 2E 30 30 2C 35 37 2E 34 33 2C 31 38 2E 30 30 2C 33 31 2E 38 38 20 0D 0A F8
+
+Start delimiter: 7E
+Length: 00 47 (71)
+Frame type: 91 (Explicit RX Indicator)
+64-bit source address: 00 13 A2 00 40 76 A9 45
+16-bit source address: FF FE
+Source endpoint: E8
+Destination endpoint: E8
+Cluster ID: 00 11
+Profile ID: C1 05
+Receive options: C1
+RF data: 35 2C 37 35 2C 31 34 2E 30 30 2C 30 2E 30 30 2C 31 35 2E 30 30 2C 32 2E 30 30 2C 31 36 2E 30 30 2C 35 37 2E 34 33 2C 31 38 2E 30 30 2C 33 31 2E 38 38 20 0D 0A
+Checksum: F8
+
+
+7E 00 47 91 00 7D 33 A2 00 40 76 A9 45 FF FE E8 E8 00 7D 31 C1 05 C1 35 2C 37 35 2C 31 34 2E 30 30 2C 30 2E 30 30 2C 31 35 2E 30 30 2C 32 2E 30 30 2C 31 36 2E 30 30 2C 35 37 2E 34 33 2C 31 38 2E 30 30 2C 33 31 2E 38 38 20 0D 0A F8
+																	 35 2C 37 35 2C 31 34 2E 30 30 2C 30 2E 30 30 2C 31 35 2E 30 30 2C 32 2E 30 30 2C 31 36 2E 30 30 2C 35 37 2E 34 33 2C 31 38 2E 30 30 2C 33 31 2E 38 38 20 0D 0A
+7E 00 47 91 00 7D 33 A2 00 40 76 A9 45 FF FE E8 E8 00 7D 31 C1 05 C1 35 2C 37 35 2C 31 34 2E 30 30 2C 30 2E 30 30 2C 31 35 2E 30 30 2C 31 2E 30 30 2C 31 36 2E 30 30 2C 34 31 2E 37 31 2C 31 38 2E 30 30 2C 33 32 2E 30 30 20 0D 0A 0E

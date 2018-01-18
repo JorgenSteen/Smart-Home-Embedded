@@ -1,0 +1,180 @@
+
+
+Samendrag \ tanker 
+informasjon om Smart home prosjektet i innebyde sensorsystemer.
+
+Nettverket:
+	Implementert et mesh nettverk, dette blir brukt på grund av fordelene som er forbundet med mesh
+	dette inkluderer egenskaper som selv helbredende og vei opptimalisering. dette egner seg godt til et 
+	sensornettverk.
+	vi bruker DigiMesh fra Xbee s1 moduler, bruker firmware verjson XXXX
+	programvaret XCTU er brukt til å konfigurere Xbee moduelene(det er også mulig å konfigurere xbee'enne igjneom mbed'en), vi har disse instilingene
+	
+	
+	Når xbee24DM honterer nettverkse infomrasjon så pakker den det inn i sit eget protokoll, her blir informasjone fra mbed sendt til xbeen hvor den blir pakket innn og vidre sendt i mesh netverket,
+		
+	
+	
+	
+	Product family: 	XB24-DM
+	Function set: 		Xbee DigiMesh 2.4
+	Firmware version: 	8073
+	
+	- MAC\PHY settings
+		:CH (Operating channel) 		- 10
+		:ID (Network ID) 				- 1FE
+		:MT (Brodcast multi-transmits)	- 3
+		:PL (TX power level) 			- Highest[4]
+		:RR (Unicast Retries) 			- 0 Retries
+		:CA (CCA Threshold) 			- 2C -dBm
+		
+	- Network
+		:CE (Routing\Messaging Mode) 	- Standard Router[0]
+		:BH (Broadcast Hops) 			- 0
+		:NH (Network Hops)				- 7 Hops
+		:MR (Mesh Unicast Retries)		- 1 Mesh Unicast Retries
+		:NM (Network Delay Slots)		- 3 Network Delay Slots
+	
+	- Addressing
+		:SH (Serial Number High)		- 13A200
+		:SL (Serial Number Low)			- 40BA37AC (eksempel. vill variere fra modul til modul)
+		:DH (Destination Address High)	- 0
+		:DL (Destination Address Low)	- 0
+		:NI (Node Identifier)			- BASE B (Eksempel. vill variere fra modul til modul)
+		:NT (Network Discovery Back-off)- 82 * 100ms
+		:NO (Network Discovery Options)	- 0
+		:CI (Cluster ID)				- 11
+		
+	- Security
+		:EE (Encryption Enable)			- Disable[0]
+		:KY (AES Encryption Key)		- 
+		
+	- Serial Interfacing
+		:BD (Baud Rate)					- 9600[3]
+		:NB (Parity)					- No Parity[0]
+		:RO (Packetization Timeout)		- 3 * character times
+		:FT (Flow Control Timeout)		- BE Bytes
+		:AP (API Enable)				- API mode With Escapes[2]
+		:AO (API Options)				- API Rx Indicator-0x90[0]
+	
+	- I/O Settings
+		:D0 (DIO0/AD0)					- Disabled[0]
+		:D1 (DIO1/AD1)					- Disabled[0]
+		:D2 (DIO2/AD2)					- Disabled[0]
+		:D3 (DIO3/AD3)					- Disabled[0]
+		:D4 (DIO4/AD4)					- Disabled[0]
+		:D5 (DIO5/AD5/ASSOCIATED_INDICATOR) - Assoc. Indicator[1]
+		:D6 (DIO6/RTS)					- Disabled[0]
+		:D7 (DIO7/CTS)					- CTS flow control[1]
+		:D8 (DIO8/SLEEP_REQUEST)		- Disabled[0]
+		:D9 (DIO9/ON_SLEEP)				- ON/SLEEP Output[1]
+		:P0 (DIO10/RSSI/PWM0)			- RSSI PWM0 Output[1]
+		:P1 (DIO11/PWM1)				- Disabled[0]
+		:P2 (DIO12)						- Disabled[0]
+		:PR (Pull-up Resistor Enable)	- FF
+		:M0 (PWM0 Duty Cycle)			- 0
+		:M1 (PWM1 Duty Cycle) 			- 0
+		:LT (Associate LED Blink Time) 	- 0  * 10ms
+		:RP (RSSI PWM Timer)			- 28 * 100ms
+		
+	- Sleep Commands
+		:SM (Sleep Mode)				- Normal[0]
+		:SO (Sleep Options)				- 0
+		:SN (Number of Cycles Between ON_SLEEP) - 1
+		:SP (Sleep Time)				- C8 * 10 ms
+		:ST (Wake Time) 				- 1388 * 1ms
+		:WH (Wake Host Delay)			- 0 * 1 ms
+	
+	- AT Command Options
+		:CC (Command Sequence Character)	- 2B Recommended: 0x20-0x7F(ASCII)
+		:CT (Command Mode Timeout) 			- 64 * 100ms
+		:GT (Guard Times)					- 3E8 *1ms
+	
+	- Firmeware Version/Information
+		:VR (Firmware Version) 				- 8073
+		:HV (Hardware Version)				- 1745
+		:DD (Device Type Identifier)		- 1000
+		:NP (Maximum Packet Payload Bytes)	- 49
+		:CK (Configuration CRC)				- C1CE
+		
+		
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+Functional requirements:
+	Implementation of wireless sensor network, which will use the same
+	communication standard for sensor data and enable smooth data sending between
+	nodes and PC. The nodes should be able to send the high priority alarm message
+	in case of “earthquake” simulated by shaking one or more of the modules. In that
+	case, the sound signal should be released on all of the nodes. 
+	
+	
+	
+	
+	Wireless sensor network,
+		wat are the criteria and wat do we need from the wireless hardware, wat is the moast basic configuration and wat might be best?
+		
+	the hardware.
+		the wireless hardware, wath arte the cirarias, how fare dos the signal ned to travle, wat inviroment, data amount do send, how often
+	
+	implantation of the OSI model and integration of the rest of the system.
+	
+	power eficensy, battary or suplied power?, 
+	
+	how will the network operate?
+		dos it need to be self healing and self omptimising? 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
+
+
