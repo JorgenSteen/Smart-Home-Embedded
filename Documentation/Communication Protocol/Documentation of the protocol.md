@@ -24,7 +24,7 @@ Each data and message type has an ID and each MCU has an address. Every MCU send
 ## Sending from MCU to PC.
 Sending is CSV based. Each letter is comma seperated and ends with 0xA "\n", so the reciever knows that this is the end of the message.
 The order is not important, as long as the data type ID comes right before the data.
-The adress of the MCU is a Capital letter between B-Z. 
+The adress of the MCU is a Capital letter between B-Z. The letter A is reserved for communicating information to all of the nodes.
 
 Example string for MCU to PC:
 Data info: MCU address: B, with MCU address ID: 5, data type ID: 18, value to send is 17.5.
