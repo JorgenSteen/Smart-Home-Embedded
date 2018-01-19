@@ -1,0 +1,55 @@
+Femte møte:
+Møtereferat. 19.01.2018
+Til stede: Jonathan, Jørgen
+
+	1. Hva har skjedd siden sist/ oppdatering.
+	
+		Gruppa:
+			-  Alexander trakk seg fra gruppen
+			- Ny fordeling av ansvarsområder
+				- Alexander hadde ansvar for rapport struktur, Språk og LabVIEW front end.
+				- Dette blir fordelt på de resterende medlemmene
+					- Jonathan: Rapport struktur og språk 
+					- Jørgen: LabVIEW front end
+					- Selv om ansvaret splittet så samarbeider vi med å ferdig stille begge til rapportens innlevering dato.
+		Rapport:
+		- Rapport plan er lagd.
+		- Godt i gang med skrivning og tekst fyll
+		- strukturen er satt.
+		
+		Protokoll:
+		- Ferdigstilt et fungerende testprodukt
+		- tester kjøretid, forløpent 66 timer i strekk uten problemer.
+		
+		Koding og sensorer
+		- Alarm funksjon fungerer
+		- App har blitt litt ferdig produkt.
+		- Buzzer er ikke ferdig
+		- Light detecting sensor er integrert.
+		- Plan for batteridrevet produkt er lagd, men ikke utført.
+		- Ingen nye sensorer er lagt til.
+		- Demo for presentasjon er ikke ferdig.
+
+	
+	2. fremover\plan oppdatering
+		
+			Mål fram til Rapport innleveringsfrist.
+				Fredag: Bli nesten ferdig med de store hovedpunktene i rapporten.
+				Lørdag: Ikke nødvendigvis ferdig, men tekst på alle punktene i rapporten.
+				Søndag: Fremstille rapporten og levere den inn.
+				Dags uavhengig:
+					- Få ferdig buzzer firmware.
+					- Lage front end til LabVIEW Interface.
+			Mål fra rapport innlevering dato til presentasjon dato
+				- Fremstille appen.
+				- Sette opp demo struktur og planlegge framføring
+				- Lage en batteridreven modul.
+				- Legge til flere akuators.
+			
+			
+			
+	3.  Neste møte 
+		22.01.2019
+		- Planlegge framdriftsplan for framføringen.
+		
+		Dette møte (møte 5) blir siste møte før rapporten innleveres.
