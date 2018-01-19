@@ -18,13 +18,13 @@ Functions.
 
 # Operation.
 
-## General info Info about sending data.
-Each data and message type has an ID and each MCU has an address. Every MCU sends to the PC and PC sends to everyone. Every package contains the address of either the sender or the one it is being sent to. Message for the PC contains the address of the one who sendes it and the message for the MCU contains the address of who it is for. In this way the MCU can separate all the package the PC sends, by reading the address and discards it if it is not ment for it. In the message there is also data and an ID of the type of data it contains. This is what they have in common, but how they format the string is different.
+## General info info about sending data.
+Each data and message type has an ID and each MCU has an address. Every MCU sends to the PC and PC sends to everyone. Every package contains the address of either the sender or the one it is being sent to. Message for the PC contains the address of the one who sendes it and the message for the MCU contains the address of who it is for. In this way the MCU can separate all the package the PC sends, by reading the address and discards it if it is not ment for it. In the message there is also data and an ID of the type of data it contains. The address of the MCU is a Capital letter between B-Z. The letter A is reserved for communicating information to all of the nodes. This is what they have in common, but how they format the string is different. 
 
 ## Sending from MCU to PC.
 Sending is CSV based. Each letter is comma seperated and ends with 0xA "\n", so the reciever knows that this is the end of the message.
 The order is not important, as long as the data type ID comes right before the data.
-The adress of the MCU is a Capital letter between B-Z. The letter A is reserved for communicating information to all of the nodes.
+
 
 Example string for MCU to PC:
 Data info: MCU address: B, with MCU address ID: 5, data type ID: 18, value to send is 17.5.
