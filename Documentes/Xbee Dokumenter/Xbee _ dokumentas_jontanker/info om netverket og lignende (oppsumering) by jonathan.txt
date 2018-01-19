@@ -136,6 +136,17 @@ Functional requirements:
 	
 	
 	
+	Ouer hardware:
+	XBee Series 1 (also called XBee 802.15.4) - These are the easiest to work with, they don’t need to be configured, although they can
+	benefit from it. Because they are easy to work with we recommend these especially if you are just starting out. For point to point communication
+	these modules work as well as the Series 2 but without all the work. A Series 1 module won’t say Series 1 on it, but it also won’t say Series 2.
+	If it doesn’t say then your module is a Series 1. Series 1 and Series 2/2.5/ZB hardware are NOT compatible. Don’t try to mix and match, don’t even
+	think about it, it won’t work, not even close. Nope, stop thinking about it…! Datasheet
+	
+	
+	Antenna config:
+	Wire Antenna – Well its a small wire sticking up, a little more of what you think of when you think of antenna.
+	RPSMA Antenna – A bigger connector to connect your own antenna, once again great if your object is in a box and you want your antenna outside the box.
 	
 	
 	
@@ -143,8 +154,18 @@ Functional requirements:
 	
 	
 	
+	802.15.4 configen og Digimesh har mindre søyete arbeidsområde en Zigbee, bedre informasjonskontroll og raskere en Zigbee
 	
 	
+	
+	
+	
+	Infor links:
+	https://www.sparkfun.com/pages/xbee_guide  			XBee Buying Guide
+	https://www.link-labs.com/blog/zigbee-vs-xbee		Zigbee vs Xbee
+	https://www.digi.com/pdf/wp_zigbeevsdigimesh.pdf	networking Zigbee vs DigiMesh
+	http://www.libelium.com/802-15-4-vs-zigbee/ 		802.15.4 vs Zigbee
+	http://docs.digi.com/display/RFKitsCommon/XBee+API+mode	digi domumentatuion
 	
 	
 	
