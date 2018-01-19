@@ -1,1 +1,2 @@
-# Copy the folder to you C drive for it to work properly.
+### This LabVIEW code is path sensitive.
+### Correct path: "C:\Smart Home" .
