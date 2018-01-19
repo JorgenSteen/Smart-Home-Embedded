@@ -166,7 +166,7 @@ Functional requirements:
 	https://www.digi.com/pdf/wp_zigbeevsdigimesh.pdf	networking Zigbee vs DigiMesh
 	http://www.libelium.com/802-15-4-vs-zigbee/ 		802.15.4 vs Zigbee
 	http://docs.digi.com/display/RFKitsCommon/XBee+API+mode	digi domumentatuion
-	
+	https://www.digi.com/blog/networking/what-are-the-differences-between-digimesh-and-zigbee-mesh/		What Are the Differences Between DigiMesh® and Zigbee® Mesh?
 	
 	
 	
