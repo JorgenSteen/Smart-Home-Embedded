@@ -78,20 +78,22 @@ And any handling of the data should be the same.
 //These are all the types of Data that can be sent and sorted with this protocol.
 //Data ID starts at 10.
 
-#define MCU_ADRESS_DATA 5  
-#define ACC_X_DATA 10  
-#define ACC_Y_DATA 11  
-#define ACC_Z_DATA 12  
-#define ACC_LEN_DATA 13  
-#define TIME_HOURS_DATA 14  
-#define TIME_MINUTS_DATA 15  
-#define TIME_SECONDS_DATA 16  
-#define ZIGBEE_TEMP_DATA 17  
-#define INSIDE_TEMP_DATA 18  
-#define OUTSIDE_TEMP_DATA 19  
-#define POT1_DATA 20  
-#define PIR_SENSOR 21  
-#define LIGHT_SENSOR 22  
+#define MCU_ADRESS_DATA 5
+#define ACC_X_DATA 10
+#define ACC_Y_DATA 11
+#define ACC_Z_DATA 12
+#define ACC_LEN_DATA 13
+#define TIME_HOURS_DATA 14
+#define TIME_MINUTS_DATA 15
+#define TIME_SECONDS_DATA 16
+#define ZIGBEE_TEMP_DATA 17
+#define INSIDE_TEMP_DATA 18
+#define OUTSIDE_TEMP_DATA 19
+#define POT1_DATA 20
+#define PIR_SENSOR_DATA 21
+#define LIGHT_SENSOR_DATA 22
+#define DOOR_STAUS_1_DATA 25
+#define DOOR_STAUS_1_DATA 26
 
 
 //Array ID.  
