@@ -1,6 +1,8 @@
 ﻿<?xml version='1.0' encoding='UTF-8'?>
 <Project Type="Project" LVVersion="16008000">
 	<Property Name="varPersistentID:{92A3BB43-3D74-4857-97B2-EE379F0E7221}" Type="Ref">/My Computer/Shared_Variables.lvlib/STOP ALL</Property>
+	<Property Name="varPersistentID:{B607E3DC-5EC1-42EB-B79D-9C0F3293382F}" Type="Ref">/My Computer/Shared_Variables.lvlib/Com_ Runnings</Property>
+	<Property Name="varPersistentID:{BC223E38-88CE-4996-851F-E80DBCBFBEB6}" Type="Ref">/My Computer/Shared_Variables.lvlib/New_message_Alarm</Property>
 	<Item Name="My Computer" Type="My Computer">
 		<Property Name="server.app.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="server.control.propertiesEnabled" Type="Bool">true</Property>
@@ -12,43 +14,55 @@
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
 		<Item Name="Abilities" Type="Folder">
+			<Item Name="Fan_control.vi" Type="VI" URL="../SubVI/Fan_control.vi"/>
 			<Item Name="Led Matrix Control.vi" Type="VI" URL="../SubVI/Led Matrix Control.vi"/>
 		</Item>
 		<Item Name="Communication functions" Type="Folder">
 			<Item Name="Auto_send_to_MCU.vi" Type="VI" URL="../SubVI/Auto_send_to_MCU.vi"/>
+			<Item Name="Byte_array_to_Com_standard.vi" Type="VI" URL="../SubVI/Byte_array_to_Com_standard.vi"/>
 			<Item Name="Communication_Handler.vi" Type="VI" URL="../Typedef/Communication_Handler.vi"/>
 			<Item Name="Configurate Serial Communication Settings.vi" Type="VI" URL="../Communication VI/Configurate Serial Communication Settings.vi"/>
 			<Item Name="Configure Critical Levels.vi" Type="VI" URL="../Communication VI/Configure Critical Levels.vi"/>
+			<Item Name="Data_In_assessment.vi" Type="VI" URL="../Typedef/Data_In_assessment.vi"/>
+			<Item Name="Extract_DATA_ID_from_header.vi" Type="VI" URL="../SubVI/Extract_DATA_ID_from_header.vi"/>
+			<Item Name="Extract_MCU_name_from_array.vi" Type="VI" URL="../Typedef/Extract_MCU_name_from_array.vi"/>
+			<Item Name="Incomming Array Handler.vi" Type="VI" URL="../SubVI/Incomming Array Handler.vi"/>
 			<Item Name="Que.-Read.vi" Type="VI" URL="../SubVI/Que.-Read.vi"/>
 			<Item Name="Que.-startvalue for MCU-com.vi" Type="VI" URL="../SubVI/Que.-startvalue for MCU-com.vi"/>
+			<Item Name="Que.-startvalue for Serial Input.vi" Type="VI" URL="../SubVI/Que.-startvalue for Serial Input.vi"/>
 			<Item Name="Raw_input_to_sorted.vi" Type="VI" URL="../SubVI/Raw_input_to_sorted.vi"/>
+			<Item Name="Send_string_to_MCU.vi" Type="VI" URL="../SubVI/Send_string_to_MCU.vi"/>
 			<Item Name="Send_to_MCU.vi" Type="VI" URL="../SubVI/Send_to_MCU.vi"/>
 			<Item Name="Serian_Sorteddata_out.vi" Type="VI" URL="../Serian_Sorteddata_out.vi"/>
 		</Item>
 		<Item Name="Funksjons SubVI" Type="Folder">
 			<Item Name="Average_array.vi" Type="VI" URL="../SubVI/Average_array.vi"/>
+			<Item Name="Avrg_minute_hour_day.vi" Type="VI" URL="../SubVI/Avrg_minute_hour_day.vi"/>
 			<Item Name="Derivering.vi" Type="VI" URL="../SubVI/Derivering.vi"/>
-			<Item Name="Extract_MCU_name_from_array.vi" Type="VI" URL="../Typedef/Extract_MCU_name_from_array.vi"/>
+			<Item Name="Display_data.vi" Type="VI" URL="../SubVI/Display_data.vi"/>
 			<Item Name="Integrate.vi" Type="VI" URL="../SubVI/Integrate.vi"/>
+			<Item Name="Live_data_feed.vi" Type="VI" URL="../SubVI/Live_data_feed.vi"/>
+		</Item>
+		<Item Name="Mobile com" Type="Folder">
+			<Item Name="BT_to_neon.vi" Type="VI" URL="../Communication VI/BT_to_neon.vi"/>
 		</Item>
 		<Item Name="Small" Type="Folder">
 			<Item Name="test1.vi" Type="VI" URL="../SubVI/test1.vi"/>
 			<Item Name="test2.vi" Type="VI" URL="../SubVI/test2.vi"/>
 		</Item>
 		<Item Name="Sub_VI" Type="Folder">
-			<Item Name="Data_In_assessment.vi" Type="VI" URL="../Typedef/Data_In_assessment.vi"/>
-			<Item Name="Data_to_uart_format.vi" Type="VI" URL="../SubVI/Data_to_uart_format.vi"/>
 			<Item Name="Read_and_plot_files.vi" Type="VI" URL="../SubVI/Read_and_plot_files.vi"/>
 			<Item Name="Serial_read.vi" Type="VI" URL="../Serial_read.vi"/>
 			<Item Name="Settings_page.vi" Type="VI" URL="../SubVI/Settings_page.vi"/>
 		</Item>
 		<Item Name="Typedef" Type="Folder">
+			<Item Name="Data_ID.ctl" Type="VI" URL="../Typedef/Data_ID.ctl"/>
 			<Item Name="MCU_addresses.ctl" Type="VI" URL="../Typedef/MCU_addresses.ctl"/>
 			<Item Name="Message_info.ctl" Type="VI" URL="../Typedef/Message_info.ctl"/>
 			<Item Name="Serial_config_cluster.ctl" Type="VI" URL="../Typedef/Serial_config_cluster.ctl"/>
 			<Item Name="Type_of_message_to_MCU.ctl" Type="VI" URL="../Typedef/Type_of_message_to_MCU.ctl"/>
+			<Item Name="Type_of_request.ctl" Type="VI" URL="../Typedef/Type_of_request.ctl"/>
 		</Item>
-		<Item Name="Display_data.vi" Type="VI" URL="../SubVI/Display_data.vi"/>
 		<Item Name="Main smart home.vi" Type="VI" URL="../Main smart home.vi"/>
 		<Item Name="Shared_Variables.lvlib" Type="Library" URL="../Shared_Variables.lvlib"/>
 		<Item Name="SubVI_blueprint.vi" Type="VI" URL="../SubVI/SubVI_blueprint.vi"/>
